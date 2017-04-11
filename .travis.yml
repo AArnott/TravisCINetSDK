@@ -1,0 +1,20 @@
+# Travis-CI Build for libgit2sharp
+# see travis-ci.org for details
+
+language: csharp
+dist: trusty
+dotnet: 1.0.1
+mono: none
+
+os:
+ - linux
+
+before_install:
+ - date -u
+ - uname -a
+ - env | sort
+
+script:
+ - dotnet restore
+ - dotnet build
+
