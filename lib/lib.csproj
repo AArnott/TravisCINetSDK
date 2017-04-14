@@ -2,10 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
+    <CodeGenerationRoslynVersion>0.3.11-g806e2e697e</CodeGenerationRoslynVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CodeGeneration.Roslyn.BuildTime" Version="0.3.11-g806e2e697e" PrivateAssets="all" />
+    <PackageReference Include="CodeGeneration.Roslyn.BuildTime" Version="$(CodeGenerationRoslynVersion)" PrivateAssets="all" />
+    <DotNetCliToolReference Include="dotnet-codegen" Version="$(CodeGenerationRoslynVersion)" />
   </ItemGroup>
 
 </Project>
