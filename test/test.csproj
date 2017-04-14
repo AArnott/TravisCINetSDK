@@ -2,15 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.0</TargetFramework>
-    <CodeGenerationRoslynVersion>0.3.11-g806e2e697e</CodeGenerationRoslynVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CodeGeneration.Roslyn.BuildTime" Version="$(CodeGenerationRoslynVersion)" PrivateAssets="all" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
     <PackageReference Include="xunit" Version="2.2.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
-    <DotNetCliToolReference Include="dotnet-codegen" Version="$(CodeGenerationRoslynVersion)" />
   </ItemGroup>
 
   <ItemGroup>
