@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFrameworks>net40;netstandard1.3</TargetFrameworks>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <CodeGenerationRoslynVersion>0.3.11-g806e2e697e</CodeGenerationRoslynVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CodeGeneration.Roslyn.BuildTime" Version="$(CodeGenerationRoslynVersion)" PrivateAssets="all" /> 
+    <DotNetCliToolReference Include="dotnet-codegen" Version="$(CodeGenerationRoslynVersion)" />
+  </ItemGroup>
 
 </Project>
