@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CodeGeneration.Roslyn.BuildTime" Version="$(CodeGenerationRoslynVersion)" PrivateAssets="all" />
+    <!-- <PackageReference Include="CodeGeneration.Roslyn.BuildTime" Version="$(CodeGenerationRoslynVersion)" PrivateAssets="all" /> -->
     <!-- <DotNetCliToolReference Include="dotnet-codegen" Version="$(CodeGenerationRoslynVersion)" /> -->
   </ItemGroup>
 
