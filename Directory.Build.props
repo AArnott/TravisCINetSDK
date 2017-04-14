@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <OutputPath>$(MSBuildThisFileDirectory)bin\$(MSBuildProjectName)\$(Configuration)\</OutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+
+    <CodeGenerationRoslynVersion>0.3.11-g806e2e697e</CodeGenerationRoslynVersion>
+    <CodeGeneratorConfiguration Condition=" '$(CodeGeneratorConfiguration)' == '' ">Debug</CodeGeneratorConfiguration>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nerdbank.GitVersioning" Version="1.6.25" PrivateAssets="all" />
+  </ItemGroup>
+</Project>
