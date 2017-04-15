@@ -14,9 +14,6 @@
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
 
   <Target Name="GenerateCodeFromAttributes" DependsOnTargets="ResolveReferences" BeforeTargets="CoreCompile">
-    <Message Importance='high' Text="Executing codegen cmd" />
-    <Exec Command="pwd" />
-    <Exec Command="dotnet codegen" />
     <Message Importance='high' Text="Executing codegen task" />
     <GenerateCodeFromAttributes
       ToolLocationOverride="$(GenerateCodeFromAttributesToolPathOverride)"
