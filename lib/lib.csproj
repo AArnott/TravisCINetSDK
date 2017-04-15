@@ -13,6 +13,20 @@
 
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
 
-  <Target Name="GenerateCodeFromAttributes" />
+  <Target Name="GenerateCodeFromAttributes" DependsOnTargets="ResolveReferences" BeforeTargets="CoreCompile">
+    <GenerateCodeFromAttributes
+      ToolLocationOverride="$(GenerateCodeFromAttributesToolPathOverride)"
+      Compile="@(Compile)"
+      ReferencePath="@(ReferencePath)"
+      GeneratorAssemblySearchPaths="@(GeneratorAssemblySearchPaths)"
+      IntermediateOutputDirectory="$(IntermediateOutputPath)">
+      <Output TaskParameter="GeneratedCompile" ItemName="GeneratedCodeFromAttribute_Compile" />
+      <Output TaskParameter="GeneratedCompile" ItemName="FileWrites" />
+      <Output TaskParameter="AdditionalWrittenFiles" ItemName="FileWrites" />
+    </GenerateCodeFromAttributes>
+    <ItemGroup>
+      <Compile Include="@(GeneratedCodeFromAttribute_Compile)" />
+    </ItemGroup>
+  </Target>
 
 </Project>
