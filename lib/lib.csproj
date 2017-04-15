@@ -20,13 +20,7 @@
       ReferencePath="@(ReferencePath)"
       GeneratorAssemblySearchPaths="@(GeneratorAssemblySearchPaths)"
       IntermediateOutputDirectory="$(IntermediateOutputPath)">
-      <Output TaskParameter="GeneratedCompile" ItemName="GeneratedCodeFromAttribute_Compile" />
-      <Output TaskParameter="GeneratedCompile" ItemName="FileWrites" />
-      <Output TaskParameter="AdditionalWrittenFiles" ItemName="FileWrites" />
     </GenerateCodeFromAttributes>
-    <ItemGroup>
-      <Compile Include="@(GeneratedCodeFromAttribute_Compile)" />
-    </ItemGroup>
   </Target>
 
 </Project>
