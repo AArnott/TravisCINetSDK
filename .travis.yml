@@ -10,6 +10,5 @@ os: linux
 
 script:
  - dotnet restore test
- - dotnet build test/test.csproj -f netcoreapp1.0
- - dotnet test test/test.csproj -f netcoreapp1.0 --no-build
+ - dotnet build test/test.csproj -f netcoreapp1.0 /v:detailed
 
